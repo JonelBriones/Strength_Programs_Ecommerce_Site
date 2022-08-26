@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+  const [navbarBackground, setNavbarBackground] = useState(true);
+  const changeBackground = () => {
+    if (window.scrollY > 950) {
+      setNavbarBackground(true);
+    } else {
+      setNavbarBackground(false);
+    }
+    console.log(window.scrollY);
+  };
+  window.addEventListener("scroll", changeBackground);
   return (
-    <div id="navbar">
+    <div id={navbarBackground ? "navbar" : "navbar-active"}>
       <div className="navlinks">
-        <h1>Strength</h1>
+        <a href="#showcase">
+          <h1>Strength</h1>
+        </a>
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="./Home.js">Home</a>
           </li>
           <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Programs</a>
+            <a href="#programs">Programs</a>
           </li>
           <li>
             <a href="">

@@ -9,7 +9,7 @@ function Home() {
           <button className="btn white">Choose your Program</button>
         </div>
       </div>
-      <main className="container">
+      <main className="container" id="programs">
         <header className="programs__header">
           <h1>Explore our programs that fit your style</h1>
         </header>
