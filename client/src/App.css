@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  width: 100%;
+}
+/* NAVBAR */
+#navbar {
+  color: #f4f4f4;
+  background-color: black;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+ul {
+  display: flex;
+  gap: 1rem;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+/* SHOWCASE */
+#showcase {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background: url("../public/images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg")
+    no-repeat center top/ cover;
+}
+/* #showcase:before {
+  content: "";
+  background: url("../public/images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg")
+    no-repeat center center/cover;
+  opacity: 0.85;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border: 5px solid blue;
+} */
+#showcase h1 {
+  color: #f4f4f4;
+  font-size: 4rem;
+  margin-block-end: 4rem;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem black;
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
+  padding: 2rem 4rem;
+}
+.btn.white {
+  padding: 1rem 2rem;
+  background-color: #f4f4f4;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.1s ease-out;
+  font-weight: 600;
+  /* box-shadow: 0rem 0.1rem 0.5rem 0.1rem black; */
+}
+.btn.white:hover {
+  background-color: #000;
+  color: #f4f4f4;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+/* PROGRAM CONTENT */
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.programs__header {
+  text-align: center;
+  margin: 4rem;
+}
+.programs {
+  /* width: 100%; */
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-block: 4rem;
+}
+.programs__content {
+  /* border: 5px solid yellow; */
+}
+.programs__content.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  gap: 4rem;
+  /* justify-items: center; */
+  /* justify-content: center; */
+  /* border: 2px solid red; */
+  margin: auto;
+}
+.programs__card {
+  max-width: 400px;
+  max-height: 100%;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem black;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.programs__name {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.programs__card img {
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: cover;
+}
+.programs__card .btn.white {
+  margin-block: 1rem;
+  background-color: #000;
+  color: #f4f4f4;
+}
+.programs__card .btn.white:hover {
+  transform: scale(1.01);
+}
+
+/* - Desktop: 1200px 75rem / Above 64.05rem */
+/* @media (min-width: 64.05rem) {
+  .programs__content.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    gap: 1rem;
+    width: min(90%, 75rem);
+  }
+} */
+/* - Laptop 1024px 64rem */
+@media (max-width: 64rem) {
+  .programs__content.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    gap: 1rem;
+    /* width: min(90%, 75rem); */
+  }
+}
+/* - Tablet: 768px 48rem */
+@media (max-width: 48rem) {
+  #navbar {
+    display: flex;
+    align-items: center;
+    position: static;
+    height: 100vh;
+  }
+  .navlinks {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  ul {
+    list-style-type: none;
+    display: block;
+    justify-content: center;
+  }
+  li {
+    margin-block: 4rem;
+  }
+  #showcase {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: none;
+  }
+  #showcase:before {
+    content: "";
+    background: url("../public/images/anastase-maragos-7kEpUPB8vNk-unsplash.jpg")
+      no-repeat center center/cover;
+    opacity: 0.85;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  #showcase h1 {
+    color: #f4f4f4;
+    font-size: 3rem;
+    margin-block-end: 2rem;
+    box-shadow: none;
+    padding: 2rem;
+  }
+  .programs__content.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    gap: 4rem;
+    /* width: min(90%, 75rem); */
+  }
+  .programs__card {
+    max-width: 100%;
+    /* min-height: 100%; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: 1rem; */
+  }
+}
+/* - phone:480px 30rem */
+/* @media (max-width: 32rem) {
+    .programs__content.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    gap: 1rem;
+    width: min(90%, 75rem);
+    border: 2px solid red;
+  }
+} */
