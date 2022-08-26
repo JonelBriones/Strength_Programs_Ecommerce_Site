@@ -3,25 +3,6 @@ import React from "react";
 function Home() {
   return (
     <>
-      <div id="navbar">
-        <div className="navlinks">
-          <h1>Strength.</h1>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-            <li>
-              <a href="">Programs</a>
-            </li>
-            <li>
-              <a href="">Cart</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div id="showcase">
         <div>
           <h1>Strength is a reward.</h1>
